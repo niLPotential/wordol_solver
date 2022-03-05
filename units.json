@@ -1,0 +1,770 @@
+{
+    "Legend Girls!!": [
+        "Haruka",
+        "Tomoka",
+        "Yuriko",
+        "Serika",
+        "Shizuka"
+    ],
+    "Pretty Dreamer": [
+        "Fuka",
+        "Nao",
+        "Hibiki",
+        "Anna",
+        "Mirai"
+    ],
+    "Blue Symphony": [
+        "Kotoha",
+        "Chihaya",
+        "Megumi",
+        "Shiho"
+    ],
+    "Sentimental Venus": [
+        "Rio",
+        "Iori",
+        "Emily",
+        "Mizuki"
+    ],
+    "Marionette wa Nemuranai": [
+        "Reika",
+        "Miki",
+        "Tsubasa",
+        "Julia"
+    ],
+    "Kawaranai Mono": [
+        "Azusa",
+        "Karen",
+        "Sayoko",
+        "Noriko"
+    ],
+    "Good-Sleep, Baby": [
+        "Kana",
+        "Iku",
+        "Yayoi",
+        "Tamaki"
+    ],
+    "Hello Concerto": [
+        "Minako",
+        "Ritsuko",
+        "Arisa",
+        "Hinata"
+    ],
+    "Hitomi no Naka no Sirius": [
+        "Matsuri",
+        "Takane",
+        "Umi",
+        "Miya"
+    ],
+    "Fu-Wa-Du-Wa": [
+        "Makoto",
+        "Mami",
+        "Elena",
+        "Ayumu"
+    ],
+    "Kokoro ga Kaeru Basho": [
+        "Chizuru",
+        "Yukiho",
+        "Momoko",
+        "Roco"
+    ],
+    "Big Balloon": [
+        "Akane",
+        "Konomi",
+        "Ami",
+        "Subaru"
+    ],
+    "Legend Days": [
+        "Hibiki",
+        "Ritsuko",
+        "Yayoi",
+        "Ami",
+        "Iori"
+    ],
+    "Otome Storm!": [
+        "Mizuki",
+        "Tsubasa",
+        "Mirai",
+        "Yuriko",
+        "Anna"
+    ],
+    "Crescendo Blue": [
+        "Shiho",
+        "Serika",
+        "Shizuka",
+        "Akane",
+        "Reika"
+    ],
+    "Eternal Harmony": [
+        "Matsuri",
+        "Emily",
+        "Chihaya",
+        "Julia",
+        "Fuka"
+    ],
+    "Ricotta": [
+        "Arisa",
+        "Noriko",
+        "Haruka",
+        "Momoko",
+        "Nao"
+    ],
+    "Burning Girl": [
+        "Tamaki",
+        "Megumi",
+        "Kotoha",
+        "Umi",
+        "Miya"
+    ],
+    "Birth": [
+        "Yukiho",
+        "Azusa",
+        "Makoto",
+        "Ayumu",
+        "Kana"
+    ],
+    "Mixnuts": [
+        "Hinata",
+        "Minako",
+        "Konomi",
+        "Mami",
+        "Iku"
+    ],
+    "Milky Way": [
+        "Chizuru",
+        "Tomoka",
+        "Miki",
+        "Subaru",
+        "Sayoko"
+    ],
+    "ARRIVE": [
+        "Takane",
+        "Roco",
+        "Karen",
+        "Elena",
+        "Rio"
+    ],
+    "Haruka na Mirai": [
+        "Haruka",
+        "Mirai"
+    ],
+    "SeichouChu->LOVER!!": [
+        "Yuriko",
+        "Anna"
+    ],
+    "Escape": [
+        "Julia",
+        "Megumi"
+    ],
+    "Eternal Spiral": [
+        "Yayoi",
+        "Kana"
+    ],
+    "piece of cake": [
+        "Shiho",
+        "Reika"
+    ],
+    "Alive Factor": [
+        "Chihaya",
+        "Shizuka"
+    ],
+    "Persone Voice": [
+        "Chizuru",
+        "Yukiho"
+    ],
+    "Cut. Cut. Cut.": [
+        "Momoko",
+        "Mizuki"
+    ],
+    "Smiling Crescent": [
+        "Serika",
+        "Miya"
+    ],
+    "Decided": [
+        "Matsuri",
+        "Konomi"
+    ],
+    "Shinsou Mermaid": [
+        "Hibiki",
+        "Tsubasa"
+    ],
+    "HELLO, YOUR ANGLE": [
+        "Tomoka",
+        "Iku"
+    ],
+    "G<3F": [
+        "Karen",
+        "Ritsuko"
+    ],
+    "little trip around the world": [
+        "Iori",
+        "Emily"
+    ],
+    "Melody in scape": [
+        "Sayoko",
+        "Minako"
+    ],
+    "Your HOME TOWN": [
+        "Hinata",
+        "Ami"
+    ],
+    "fruity love": [
+        "Akane",
+        "Roco"
+    ],
+    "Yoru ni Kagayaku Seiza no You ni": [
+        "Arisa",
+        "Nao"
+    ],
+    "Himitsu no Memories": [
+        "Takane",
+        "Fuka"
+    ],
+    "Tashika na Ashiato": [
+        "Azusa",
+        "Rio"
+    ],
+    "Understand? Understand!": [
+        "Umi",
+        "Kotoha"
+    ],
+    "Jungle*Party": [
+        "Tamaki",
+        "Mami"
+    ],
+    "Beat the World": [
+        "Ayumu",
+        "Makoto"
+    ],
+    "Emergence Vive": [
+        "Elena",
+        "Miki"
+    ],
+    "Dreamscape": [
+        "Subaru",
+        "Noriko"
+    ],
+    "Cancer": [
+        "Emily",
+        "Nao",
+        "Hinata"
+    ],
+    "Leo": [
+        "Elena",
+        "Iku",
+        "Roco"
+    ],
+    "Libra": [
+        "Tsubasa",
+        "Minako",
+        "Noriko"
+    ],
+    "Capricorn": [
+        "Kana",
+        "Anna",
+        "Rio"
+    ],
+    "Sunshine Rhythm": [
+        "Elena",
+        "Tsubasa",
+        "Hinata",
+        "Kana",
+        "Minako"
+    ],
+    "Sagittarius": [
+        "Megumi",
+        "Mizuki",
+        "Ayumu"
+    ],
+    "Pisces": [
+        "Chizuru",
+        "Tomoka",
+        "Karen"
+    ],
+    "Virgo": [
+        "Shizuka",
+        "Subaru",
+        "Yuriko"
+    ],
+    "Aquarius": [
+        "Reika",
+        "Sayoko",
+        "Julia"
+    ],
+    "BlueMoon Harmony": [
+        "Ayumu",
+        "Sayoko",
+        "Tomoka",
+        "Reika",
+        "Shizuka"
+    ],
+    "Scorpio": [
+        "Shiho",
+        "Umi",
+        "Kotoha",
+        "Arisa"
+    ],
+    "Aries": [
+        "Serika",
+        "Akane",
+        "Tamaki"
+    ],
+    "Taurus": [
+        "Mirai",
+        "Matsuri",
+        "Miya"
+    ],
+    "Gemini": [
+        "Momoko",
+        "Fuka",
+        "Konomi"
+    ],
+    "Starlight Melody": [
+        "Arisa",
+        "Mirai",
+        "Serika",
+        "Kotoha",
+        "Fuka"
+    ],
+    "Souzou wa Hajimari no Kaze o Tsurete": [
+        "Arisa",
+        "Roco",
+        "Yuriko",
+        "Serika",
+        "Tomoka"
+    ],
+    "Kyouki Ranbu": [
+        "Noriko",
+        "Tamaki",
+        "Julia",
+        "Momoko",
+        "Hinata"
+    ],
+    "Akai Sekai ga Kieru Koro": [
+        "Karen",
+        "Mizuki",
+        "Kana",
+        "Minako",
+        "Reika"
+    ],
+    "Brand New Theater": [
+        "Tsumugi",
+        "Shizuka",
+        "Mirai",
+        "Tsubasa",
+        "Kaori"
+    ],
+    "Mighty Sailors(Tsubasa, Umi)": [
+        "Tsubasa",
+        "Umi"
+    ],
+    "Mighty Sailors(Tsubasa, Yuriko)": [
+        "Tsubasa",
+        "Yuriko"
+    ],
+    "FAIRY STARS": [
+        "Julia",
+        "Shizuka",
+        "Megumi",
+        "Tsumugi",
+        "Shiho"
+    ],
+    "ANGEL STARS": [
+        "Anna",
+        "Tsubasa",
+        "Reika",
+        "Kaori",
+        "Serika"
+    ],
+    "PRINCESS STARS": [
+        "Kana",
+        "Mirai",
+        "Yuriko",
+        "Matsuri",
+        "Emily"
+    ],
+    "GRAC&E NOCTURNE": [
+        "Megumi",
+        "Tomoka",
+        "Chizuru",
+        "Rio"
+    ],
+    "Cleasky": [
+        "Miya",
+        "Elena"
+    ],
+    "Twinkle Rhythm": [
+        "Yuriko",
+        "Iku",
+        "Arisa"
+    ],
+    "EScape": [
+        "Tsumugi",
+        "Mizuki",
+        "Shiho"
+    ],
+    "4Luxury": [
+        "Reika",
+        "Kaori",
+        "Fuka",
+        "Konomi"
+    ],
+    "Senkou*HANABI Dan": [
+        "Minako",
+        "Nao",
+        "Sayoko",
+        "Umi",
+        "Noriko"
+    ],
+    "D/Zeal": [
+        "Shizuka",
+        "Julia"
+    ],
+    "little cady ~3 little candy~": [
+        "Akane",
+        "Karen",
+        "Tsubasa"
+    ],
+    "Charlotte Charlotte": [
+        "Emily",
+        "Matsuri"
+    ],
+    "Jelly PoP Beans": [
+        "Momoko",
+        "Ayumu",
+        "Roco",
+        "Subaru"
+    ],
+    "Pikopiko Planets": [
+        "Tamaki",
+        "Hinata",
+        "Serika",
+        "Anna"
+    ],
+    "STAR ELEMENTS": [
+        "Kotoha",
+        "Mirai",
+        "Kana"
+    ],
+    "Big Bang's Volleyball!!!!!": [
+        "Sayoko",
+        "Megumi",
+        "Umi",
+        "Fuka",
+        "Nao"
+    ],
+    "Ordinary Clover": [
+        "Shizuka",
+        "Rio",
+        "Kaori",
+        "Miya",
+        "Anna"
+    ],
+    "Last Actress": [
+        "Mizuki",
+        "Konomi",
+        "Kotoha",
+        "Momoko",
+        "Tsumugi"
+    ],
+    "Genesis x Nemesis": [
+        "Makoto",
+        "Kaori",
+        "Tsumugi",
+        "Julia",
+        "Akane"
+    ],
+    "White Vows": [
+        "Konomi",
+        "Chizuru",
+        "Fuka",
+        "Rio",
+        "Kaori"
+    ],
+    "Do the IDOL!! ~Dangaizeppeki Chupacabra~": [
+        "Subaru",
+        "Emily",
+        "Tomoka",
+        "Yuriko",
+        "Tsubasa"
+    ],
+    "Chrono-Lexica": [
+        "Mizuki",
+        "Anna",
+        "Yuriko",
+        "Roco",
+        "Subaru"
+    ],
+    "Xs": [
+        "Iori",
+        "Miki",
+        "Yukiho",
+        "Makoto"
+    ],
+    "Sherry 'n Cherry": [
+        "Rio",
+        "Konomi"
+    ],
+    "ARCANA": [
+        "Takane",
+        "Azusa",
+        "Chihaya"
+    ],
+    "Hanasakuya": [
+        "Tomoka",
+        "Emily",
+        "Tsumugi"
+    ],
+    "Jus-2-Mint": [
+        "Nao",
+        "Minako"
+    ],
+    "miraclesonic*expassion": [
+        "Umi",
+        "Noriko",
+        "Ayumu",
+        "Elena"
+    ],
+    "Fleuranges": [
+        "Hinata",
+        "Serika",
+        "Karen",
+        "Miya"
+    ],
+    "Opera Seria Kiramekiza": [
+        "Kotoha",
+        "Kaori",
+        "Shiho",
+        "Matsuri"
+    ],
+    "Diamond Diver": [
+        "Haruka",
+        "Yayoi",
+        "Hibiki"
+    ],
+    "TintMe!": [
+        "Momoko",
+        "Tamaki",
+        "Iku"
+    ],
+    "TRICK&TREAT": [
+        "Akane",
+        "Reika"
+    ],
+    "chicAAmor": [
+        "Chizuru",
+        "Fuka",
+        "Sayoko",
+        "Julia"
+    ],
+    "Kimidori": [
+        "Megumi",
+        "Arisa",
+        "Kana"
+    ],
+    "ARMooo": [
+        "Mami",
+        "Ritsuko",
+        "Ami"
+    ],
+    "Strawberry Pop Moon": [
+        "Tsubasa",
+        "Mirai",
+        "Shizuka"
+    ],
+    "Girl meets Wonder": [
+        "Subaru",
+        "Momoko",
+        "Serika",
+        "Hibiki",
+        "Matsuri"
+    ],
+    "World Changer": [
+        "Makoto",
+        "Haruka",
+        "Chihaya",
+        "Miki",
+        "Emily"
+    ],
+    "Kururi Uta": [
+        "Chizuru",
+        "Elena",
+        "Akane",
+        "Kaori",
+        "Shiho"
+    ],
+    "EVERYDAY STARS!!": [
+        "Kana",
+        "Mizuki",
+        "Takane",
+        "Hinata",
+        "Nao"
+    ],
+    "DIAMOND JOKER": [
+        "Tsubasa",
+        "Takane",
+        "Matsuri",
+        "Megumi"
+    ],
+    "Manatsu no Dia": [
+        "Mami",
+        "Rio",
+        "Yukiho",
+        "Kotoha"
+    ],
+    "Secret Jewel ~Miwaku no Kongouseki~": [
+        "Momoko",
+        "Kaori",
+        "Iori",
+        "Mirai",
+        "Miya"
+    ],
+    "Ubugoe to Club": [
+        "Umi",
+        "Serika",
+        "Azusa",
+        "Roco"
+    ],
+    "Trefle de Noel": [
+        "Elena",
+        "Chizuru",
+        "Makoto",
+        "Mizuki"
+    ],
+    "Clover's Cry ~Kami to Kamioroshi no Shoujo~": [
+        "Ritsuko",
+        "Tamaki",
+        "Nao",
+        "Konomi",
+        "Hinata"
+    ],
+    "Merry": [
+        "Yayoi",
+        "Makoto",
+        "Haruka",
+        "Chihaya",
+        "Miki"
+    ],
+    "Merry(Duo)": [
+        "Shiho",
+        "Kana"
+    ],
+    "Project Fairy": [
+        "Hibiki",
+        "Miki",
+        "Takane"
+    ],
+    "Tristar Vision": [
+        "Elena",
+        "Kotoha",
+        "Megumi"
+    ],
+    "Kyun! Vampire Girl": [
+        "Iku",
+        "Iori",
+        "Momoko"
+    ],
+    "Large Size Party": [
+        "Azusa",
+        "Chihaya",
+        "Takane"
+    ],
+    "Largo Size Party(Duo)": [
+        "Anna",
+        "Yuriko"
+    ],
+    "shiny smile(Duo)": [
+        "Haruka",
+        "Karen"
+    ],
+    "Ramune-iro Seishun(Duo)": [
+        "Matsuri",
+        "Tomoka",
+        "Miya"
+    ],
+    "99 Nights(Duo)": [
+        "Fuka",
+        "Rio"
+    ],
+    "Little Match Girl(Duo)": [
+        "Mizuki",
+        "Minako"
+    ],
+    "Sunny": [
+        "Tamaki",
+        "Umi"
+    ],
+    "edeN": [
+        "Reika",
+        "Julia"
+    ],
+    "Seien no Megami{Makoto, Hinata)": [
+        "Makoto",
+        "Hinata"
+    ],
+    "Seien no Megami(Ritsuko, Takane)": [
+        "Takane",
+        "Ritsuko"
+    ],
+    "Miracle Night": [
+        "Chihaya",
+        "Sayoko"
+    ],
+    "Lavender": [
+        "Azusa",
+        "Umi",
+        "Iku"
+    ],
+    "Armeria&deracine": [
+        "Megumi",
+        "Minako",
+        "Tsumugi",
+        "Momoko"
+    ],
+    "Jasmine": [
+        "Karen",
+        "Chihaya",
+        "Subaru"
+    ],
+    "World Athletic COOK-KING ~Shousha Hisshoku!? Sports-shoku no Aki~": [
+        "Minako",
+        "Hibiki",
+        "Iku",
+        "Karen",
+        "Ayumu"
+    ],
+    "ChocoLove Ru*Eve": [
+        "Sayoko",
+        "Mirai",
+        "Megumi",
+        "Anna",
+        "Akane"
+    ],
+    "MILLION RADIO!": [
+        "Serika",
+        "Mirai",
+        "Shizuka"
+    ],
+    "Aisle": [
+        "Mizuki",
+        "Tsubasa",
+        "Julia"
+    ],
+    "Clover": [
+        "Serika",
+        "Umi",
+        "Shiho",
+        "Kana"
+    ],
+    "VOY@GER": [
+        "Anna",
+        "Tsumugi",
+        "Umi"
+    ],
+    "IGNITE": [
+        "Kotoha",
+        "Julia",
+        "Mizuki",
+        "Tsubasa",
+        "Serika"
+    ]
+}
