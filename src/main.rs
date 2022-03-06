@@ -1,17 +1,13 @@
-use wordol_solver::{IdolName, IncludedInUnit, IsEligible};
+use wordol_solver::IsEligible;
 
 fn main() {
     let mut unit_list = wordol_solver::read_unit_data();
 
-    let output = [
-        IncludedInUnit::SameType(IdolName::Tamaki),
-        IncludedInUnit::SameType(IdolName::Umi),
-        IncludedInUnit::Included(IdolName::Mirai),
-        IncludedInUnit::None(IdolName::Tsubasa),
-        IncludedInUnit::SameType(IdolName::Empty),
-    ];
+    let output = wordol_solver::read_wordol_output();
 
     unit_list.retain(|_, unit| unit.is_eligible(&output));
 
-    println!("{:?}", unit_list);
+    for unit in unit_list {
+        println!("{:?}", unit);
+    }
 }

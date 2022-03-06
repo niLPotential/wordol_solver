@@ -4,11 +4,7 @@ A primitive solver for WORDOL(https://app.39m.ltd/games/wordol/) inspired by Wor
 
 # TODO List
 
-The current version takes the output of WORDOL inside the source code. Change it to take it via standard input or external json file.
-
 Rethink how to find eligible units.
-
-The enum IncludedInUnit all contain an IdolName. Maybe a struct is better.
 
 Improve how to deal with empty slots. Currently green empty slots must be input as SameType, not Included.
 

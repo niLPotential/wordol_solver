@@ -1,0 +1,46 @@
+{
+    "PRINCESS STARS": [
+        {
+            "idolname": "Sayoko",
+            "included_in_unit": "None"
+        },
+        {
+            "idolname": "Kotoha",
+            "included_in_unit": "None"
+        },
+        {
+            "idolname": "Ayumu",
+            "included_in_unit": "SameType"
+        },
+        {
+            "idolname": "Konomi",
+            "included_in_unit": "None"
+        },
+        {
+            "idolname": "Reika",
+            "included_in_unit": "None"
+        }
+    ],
+    "Good-Sleep, Baby": [
+        {
+            "idolname": "Sayoko",
+            "included_in_unit": "Included"
+        },
+        {
+            "idolname": "Tomoka",
+            "included_in_unit": "None"
+        },
+        {
+            "idolname": "Chizuru",
+            "included_in_unit": "None"
+        },
+        {
+            "idolname": "Tsubasa",
+            "included_in_unit": "SameType"
+        },
+        {
+            "idolname": "Miki",
+            "included_in_unit": "SameType"
+        }
+    ]
+}

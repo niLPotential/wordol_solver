@@ -1,0 +1,22 @@
+[
+    {
+        "idolname": "Umi",
+        "included_in_unit": "SameType"
+    },
+    {
+        "idolname": "Mizuki",
+        "included_in_unit": "SameType"
+    },
+    {
+        "idolname": "Tsubasa",
+        "included_in_unit": "Included"
+    },
+    {
+        "idolname": "Serika",
+        "included_in_unit": "None"
+    },
+    {
+        "idolname": "Empty",
+        "included_in_unit": "SameType"
+    }
+]

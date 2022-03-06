@@ -1,9 +1,9 @@
-use serde::{Deserialize, Serialize};
+use serde::Deserialize;
 use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::hash::Hash;
 
-#[derive(Debug, PartialEq, Eq, Hash)]
+#[derive(Eq, PartialEq, Hash)]
 enum IdolType {
     Princess,
     Fairy,
@@ -11,7 +11,7 @@ enum IdolType {
     Empty,
 }
 
-#[derive(Debug, PartialEq, Eq, Serialize, Deserialize, Hash, Clone, Copy)]
+#[derive(Deserialize, Hash, PartialEq, Eq, Debug)]
 pub enum IdolName {
     Empty,
     Haruka,
@@ -128,11 +128,17 @@ impl IdolName {
     }
 }
 
-#[derive(Eq, PartialEq, Debug, Hash, Clone, Copy, Deserialize)]
+#[derive(Deserialize, PartialEq)]
 pub enum IncludedInUnit {
-    Included(IdolName),
-    SameType(IdolName),
-    None(IdolName),
+    Included,
+    SameType,
+    None,
+}
+
+#[derive(Deserialize)]
+pub struct SingleOutput {
+    pub idolname: IdolName,
+    pub included_in_unit: IncludedInUnit,
 }
 
 trait TypeMap {
@@ -164,32 +170,44 @@ impl IsEligible for Unit {
     fn is_eligible(&self, output: &WordolOutput) -> bool {
         let mut unit_typemap = self.typemap();
 
-        for result in output {
-            if let IncludedInUnit::Included(idol) = result {
-                if self.contains(idol) {
-                    *unit_typemap.entry(idol.idoltype()).or_insert(0) -= 1;
-                } else {
-                    return false;
-                }
+        for result_included in output
+            .iter()
+            .filter(|&result| result.included_in_unit == IncludedInUnit::Included)
+        {
+            if self.contains(&result_included.idolname) {
+                *unit_typemap
+                    .entry(result_included.idolname.idoltype())
+                    .or_insert(0) -= 1;
+            } else {
+                return false;
             }
         }
 
-        for result in output {
-            if let IncludedInUnit::SameType(idol) = result {
-                let counter = unit_typemap.entry(idol.idoltype()).or_insert(0);
-                if *counter == 0 || self.contains(idol) {
-                    return false;
-                } else {
-                    *counter -= 1;
-                }
+        for result_sametype in output
+            .iter()
+            .filter(|&result| result.included_in_unit == IncludedInUnit::SameType)
+        {
+            let counter = unit_typemap
+                .entry(result_sametype.idolname.idoltype())
+                .or_insert(0);
+            if *counter == 0 || self.contains(&result_sametype.idolname) {
+                return false;
+            } else {
+                *counter -= 1;
             }
         }
 
-        for result in output {
-            if let IncludedInUnit::None(idol) = result {
-                if *unit_typemap.entry(idol.idoltype()).or_insert(0) != 0 || self.contains(idol) {
-                    return false;
-                }
+        for result_none in output
+            .iter()
+            .filter(|&result| result.included_in_unit == IncludedInUnit::None)
+        {
+            if *unit_typemap
+                .entry(result_none.idolname.idoltype())
+                .or_insert(0)
+                != 0
+                || self.contains(&result_none.idolname)
+            {
+                return false;
             }
         }
 
@@ -197,11 +215,18 @@ impl IsEligible for Unit {
     }
 }
 
-type WordolOutput = [IncludedInUnit; 5];
+type WordolOutput = [SingleOutput; 5];
 
 pub fn read_unit_data() -> HashMap<String, Unit> {
     let unit_data = fs::read_to_string("units.json").expect("Unable to read unit data");
     serde_json::from_str(&unit_data).expect("Unable to parse json into HashNap<String, Unit>")
+}
+
+pub fn read_wordol_output() -> WordolOutput {
+    let wordol_output =
+        fs::read_to_string("wordol_output.json").expect("Unable to read wordol output");
+
+    serde_json::from_str(&wordol_output).expect("Unable to parse json into WordolOutput")
 }
 
 #[cfg(test)]
@@ -209,89 +234,27 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_idoltype_trait() {
-        let azusa = IdolName::Azusa;
-        assert_eq!(IdolType::Angel, azusa.idoltype());
-        let chihaya = IdolName::Chihaya;
-        assert_eq!(IdolType::Fairy, chihaya.idoltype());
-        let mirai = IdolName::Mirai;
-        assert_eq!(IdolType::Princess, mirai.idoltype());
-    }
-
-    #[test]
-    fn test_typemap() {
-        let unit_list = read_unit_data();
-        assert_eq!(
-            unit_list["Kawaranai Mono"].typemap(),
-            HashMap::from([
-                (IdolType::Princess, 2),
-                (IdolType::Angel, 2),
-                (IdolType::Empty, 1)
-            ])
-        );
-    }
-
-    #[test]
-    #[ignore]
-    fn test_optimal() {
+    fn test_is_eligible() {
         let unit_list = read_unit_data();
 
-        let maybe_optimal = [
-            IdolName::Umi,
-            IdolName::Mizuki,
-            IdolName::Tsubasa,
-            IdolName::Mirai,
-            IdolName::Serika,
-        ];
+        let read_test_list_eligible =
+            fs::read_to_string("tests_eligible.json").expect("Unable to read eligible test list");
+        let test_list_eligible: HashMap<String, WordolOutput> =
+            serde_json::from_str(&read_test_list_eligible)
+                .expect("Unable to parse json into eligible test list");
 
-        let mut output_set = HashSet::new();
-
-        for (name, unit) in &unit_list {
-            assert!(
-                output_set.insert(generate_output(unit, &maybe_optimal)),
-                "Duplicate Found: {}:{:?}",
-                name,
-                unit
-            );
+        for (name, eligible_output) in test_list_eligible {
+            assert!(unit_list[&name].is_eligible(&eligible_output));
         }
 
-        assert_eq!(unit_list.len(), output_set.len());
-    }
+        let read_test_list_not_eligible = fs::read_to_string("tests_not_eligible.json")
+            .expect("Unable to read not eligible test list");
+        let test_list_not_eligible: HashMap<String, WordolOutput> =
+            serde_json::from_str(&read_test_list_not_eligible)
+                .expect("Unable to parse json into not eligible test list");
 
-    trait New {
-        fn new() -> Self;
-    }
-
-    impl New for WordolOutput {
-        fn new() -> Self {
-            [IncludedInUnit::None(IdolName::Empty); 5]
+        for (name, not_eligible_output) in test_list_not_eligible {
+            assert!(!unit_list[&name].is_eligible(&not_eligible_output));
         }
-    }
-
-    fn generate_output(unit: &Unit, input: &[IdolName; 5]) -> WordolOutput {
-        let mut output = WordolOutput::new();
-        let mut not_included = Vec::new();
-        let mut unit_typemap = unit.typemap();
-
-        for i in 0..5 {
-            if unit.contains(&input[i]) {
-                output[i] = IncludedInUnit::Included(input[i]);
-                *unit_typemap.entry(input[i].idoltype()).or_insert(0) -= 1;
-            } else {
-                not_included.push(i);
-            }
-        }
-
-        for i in not_included {
-            let counter = unit_typemap.entry(input[i].idoltype()).or_insert(0);
-            if *counter > 0 {
-                output[i] = IncludedInUnit::SameType(input[i]);
-                *counter -= 1;
-            } else {
-                output[i] = IncludedInUnit::None(input[i]);
-            }
-        }
-
-        output
     }
 }
