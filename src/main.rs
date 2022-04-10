@@ -1,5 +1,4 @@
 mod app;
-
 use app::Model;
 // use wordol_solver::IsEligible;
 

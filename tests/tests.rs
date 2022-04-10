@@ -1,5 +1,6 @@
 use std::collections::HashSet;
-use wordol_solver::{IdolName, IncludedInUnit, IsEligible, SingleOutput};
+use wordol_solver::data::{IdolName, IncludedInUnit};
+use wordol_solver::{IsEligible, SingleOutput};
 
 #[test]
 fn test_retained_unit_list() {
