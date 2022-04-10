@@ -1,7 +1,9 @@
+use enum_iterator::IntoEnumIterator;
+use num_derive::FromPrimitive;
 use serde::Deserialize;
 use std::collections::{HashMap, HashSet};
-use std::fs;
 use std::hash::Hash;
+use std::{fmt, fs};
 
 #[derive(Eq, PartialEq, Hash)]
 enum IdolType {
@@ -11,7 +13,7 @@ enum IdolType {
     Empty,
 }
 
-#[derive(Deserialize, Hash, PartialEq, Eq, Debug)]
+#[derive(Deserialize, Hash, PartialEq, Eq, Debug, Copy, Clone, IntoEnumIterator, FromPrimitive)]
 pub enum IdolName {
     Empty,
     Haruka,
@@ -66,6 +68,12 @@ pub enum IdolName {
     Julia,
     Tsumugi,
     Kaori,
+}
+
+impl fmt::Display for IdolName {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{:?}", self)
+    }
 }
 
 impl IdolName {
@@ -128,14 +136,20 @@ impl IdolName {
     }
 }
 
-#[derive(Deserialize, PartialEq)]
+#[derive(Deserialize, PartialEq, Copy, Clone, Debug, FromPrimitive)]
 pub enum IncludedInUnit {
-    Included,
-    SameType,
     None,
+    SameType,
+    Included,
 }
 
-#[derive(Deserialize)]
+impl fmt::Display for IncludedInUnit {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{:?}", self)
+    }
+}
+
+#[derive(Deserialize, Copy, Clone)]
 pub struct SingleOutput {
     pub idolname: IdolName,
     pub included_in_unit: IncludedInUnit,
@@ -215,7 +229,7 @@ impl IsEligible for Unit {
     }
 }
 
-type WordolOutput = [SingleOutput; 5];
+pub type WordolOutput = [SingleOutput; 5];
 
 pub fn read_unit_data() -> HashMap<String, Unit> {
     let unit_data = fs::read_to_string("units.json").expect("Unable to read unit data");
